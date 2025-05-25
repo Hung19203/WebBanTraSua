@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">   
+    <title>Trang chủ</title>
+    
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font/all.css" rel="stylesheet" />
+    <link href="font/all.min.css" rel="stylesheet" />
+    <link href="css_local/anhbg3.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="font/all.min.js"></script>
+    <script src="font/all.js"></script>
+
+    <script src="Lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <link href="Lib/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Lib/Style.css" rel="stylesheet" type="text/css" />
+    <script src="Lib/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Lib/fontawesome-all.min.js" type="text/javascript"></script>
+    <script src="Lib/bootstrap_bundle.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-white" style="height:55px">
+                <!--logo-->
+                <a class="navbar-brand" href="Main_Page.aspx">
+                  <img src="img/logo.png" alt="Avatar Logo" style="width:70px; height:50px" class="rounded-pill"> 
+                </a>
+                  
+            <!--menu-->               
+             <ul class="nav ms-auto my-2">
+              <li class="nav-item">
+                <a class="nav-link active" href="Main_Page.aspx" style="color:#FC5759">TRANG CHỦ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Gioithieu.aspx" style="color:#FC5759">GIỚI THIỆU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="SanPham.aspx" style="color:#FC5759">SẢN PHẨM</a>
+              </li>
+              <li class="nav-item" style="margin-top: 8px">
+                <asp:LinkButton ID="Lnkql" runat="server" CssClass="me-3" PostBackUrl="QLSP.aspx" Text="DANH MỤC QUẢN LÝ" ForeColor="#FC5759" />
+              </li>
+              <li class="nav-item">
+                <input runat="server" id="searchtb" class="form-control col me-2" type="text" placeholder="Search..">
+              </li>
+              <li class="nav-item me-2">
+                  <Button runat="server" ID="search" class="btn col" type="submit" style="background-color:#FC5759" onserverclick="Search_Click"><i class="fa-solid fa-magnifying-glass" style="color:white"></i></Button>
+                </li>           
+               <li class="nav-item me-2" style="margin-top: 8px">               
+                   <div id="loginForm" runat="server">Xin Chào,&nbsp;<span runat="server" id="loginName" style="font-weight: bold;">admin</span>&nbsp;&nbsp;
+                       <a id="loginDangXuat" runat="server" onserverclick="loginDangXuat_Click" href="#"><i class="fas fa-times"></i></a>
+                   </div>
+               </li>
+               <li class="nav-item me-2"> 
+                   <button runat="server" id="loginButton" class="btn btn-outline-danger"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="">
+                      <i class="fas fa-user"></i>&nbsp Đăng nhập
+                   </button>
+               </li>
+              <li class="nav-item">
+                <a href="GioHang.aspx"  class="text-danger" style="font-size:20pt; margin-top:10px;"><i class="fas fa-shopping-cart"></i><span runat="server" class="text-light bg-danger" style="font-size:12pt; border-radius:50%; padding-left:5px; padding-right:5px; padding-bottom:1px; padding-top:1px;" id="countShopPay"></span></a>
+              </li>  
+           </ul>                                                                                      
+       </nav>
+        <hr style="border:2px solid #ff4d4f"/>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div id="Admin" class="col-3" runat="server">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-bars"></i>&nbsp Danh mục</a>
+              <a href="QLSP.aspx" class="list-group-item list-group-item-action list-group-item-primary"><i class="fas fa-archive"></i>&nbsp Quản lý sản phẩm</a>
+              <a href="QLTK.aspx" class="list-group-item list-group-item-action list-group-item-info"><i class="fas fa-user"></i>&nbsp Quản lý tài khoản</a>
+              <a href="QLHSX.aspx" class="list-group-item list-group-item-action list-group-item-success"><i class="fab fa-angular"></i>&nbsp Quản lý hãng sản xuất</a>
+              <a href="QLDH.aspx" class="list-group-item list-group-item-action list-group-item-warning"><i class="fas fa-clipboard-list"></i>&nbsp Quản lý đơn hàng</a>
+              <a href="QLCTDH.aspx" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-list-ol"></i>&nbsp Quản lý chi tiết đơn hàng</a>
+            </div>
+        </div>
+        <div id="Normal" class="col-9" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+       
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" style="background-image:url('img/Strawberry.jpg'); background-size:cover;">
+                  <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                    <button type="button" class="btn-close text-light bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body border-0" style="opacity:0.7;">
+                    Username: <asp:TextBox ID="txtUserOK" CssClass="form-control" Placeholder="Username" runat="server"></asp:TextBox><br />
+                    Password: <asp:TextBox ID="txtPassOK" CssClass="form-control" Placeholder="Password" TextMode="Password" runat="server"></asp:TextBox><br />
+                  </div>
+                  <div class="modal-footer border-0">
+                    <a href="DangKy.aspx"" class="btn btn-success" >Đăng ký</a>
+                    <asp:Button ID="btnLoginOK" runat="server" CssClass="btn btn-danger" 
+                          Text="Đăng nhập" onclick="btnLoginOK_Click"></asp:Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<div class="container-fluid" id="bot">
+<div class="container text-white bg-black">
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+            <h4>Cửa hàng</h4>
+            <p>Tài khoản của tôi</p>
+            <p>Thông tin mới nhất</p>
+            <p>Hàng mua</p>
+        </div>
+        <div class="col-3">
+            <h4>Đường dẫn nhanh</h4>
+            <a href="Gioithieu.aspx" style="color:white"><p>Về chúng tôi</p></a>
+            <a href="SanPham.aspx" style="color:white"><p>Mua đồ Online</p></a>
+            <p>Câu hỏi thường gặp</p>
+        </div>
+        <div class="col-3">
+            <h4>Dịch vụ</h4>
+            <p>Hỗ trợ khách hàng</p>
+            <p>Vận chuyển</p>
+            <p>Đóng gói sản phẩm</p>
+            <p>Đơn đặt hàng</p>
+        </div>
+        <div class="col-3">
+            <h4>Liên lạc với chúng tôi</h4>
+            <p>Số điện thoại: ------4407</p>
+            <p>Gmail: ------1503@gmail.com</p>
+        </div>
+    </div>
+    <br />
+    <div class="row ">
+        <div class="col-2">
+            <p>Chính sách Cookie</p>
+        </div>
+        <div class="col-2">
+            <p>Chính sách bảo mật</p>
+        </div>
+        <div class="col-3">
+            <p>Các điều khoản và điều kiện</p>
+        </div>
+    </div>
+    <!--footer-->
+    <hr class="bg-white"/>
+    <footer>
+         <p class="text-center ">&copy; Copyright 2024 - Yummy.com </p>
+    </footer>
+    <br />
+</div>
+</div>
+</form>
+</body>
+</html>
