@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="QLHSX.aspx.cs" Inherits="WebApplication2.QLHSX" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="Lib/Grid_Paging.js"></script>
+    <script src="js/Grid_Paging.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             

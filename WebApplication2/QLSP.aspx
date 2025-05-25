@@ -2,7 +2,7 @@
     CodeBehind="QLSP.aspx.cs" Inherits="WebApplication2.QLSP" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="Lib/Grid_Paging.js" type="text/javascript"></script>
+    <script src="js/Grid_Paging.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btnLuusp").hide(); //ẩn

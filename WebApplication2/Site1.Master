@@ -17,12 +17,12 @@
     <script src="font/all.min.js"></script>
     <script src="font/all.js"></script>
 
-    <script src="Lib/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <link href="Lib/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="Lib/Style.css" rel="stylesheet" type="text/css" />
-    <script src="Lib/bootstrap.min.js" type="text/javascript"></script>
-    <script src="Lib/fontawesome-all.min.js" type="text/javascript"></script>
-    <script src="Lib/bootstrap_bundle.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/fontawesome-all.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap_bundle.js" type="text/javascript"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
 </asp:ContentPlaceHolder>
 </head>

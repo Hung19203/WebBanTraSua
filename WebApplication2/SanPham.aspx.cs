@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -10,12 +11,13 @@ namespace WebApplication2
     {
         QueryModel SQL = new QueryModel();
         protected void Page_Load(object sender, EventArgs e)
-        {           
-            if (ClassSearch.storevalue != null)
-            {           
-                if (ClassSearch.storevalue.Rows.Count > 0)
+        {
+            if (Session["search"] != null)
+            {
+                DataTable dt = (DataTable)Session["search"];
+                if (dt.Rows.Count > 0)
                 {
-                    DataList1.DataSource = ClassSearch.storevalue;
+                    DataList1.DataSource = dt;
                 }
             }
             else

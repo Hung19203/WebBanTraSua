@@ -5,7 +5,6 @@ namespace System
 {
     public class LINK
     {
-        //string strConn = WebConfigurationManager.ConnectionStrings["QLBANGIAYConnectionString"].ConnectionString;
         string strConn = "Data Source=.;Initial Catalog=QLBANTRASUA;Integrated Security=True";
         private EnforceModel Enforce = new EnforceModel();
         public SqlConnection Connect()

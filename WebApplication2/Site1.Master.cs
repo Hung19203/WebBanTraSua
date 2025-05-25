@@ -109,7 +109,7 @@ namespace WebApplication2
 
         protected void Search_Click(object sender, EventArgs e)
         {
-            ClassSearch.storevalue = Data.SelectTableSearch("SANPHAM", "TenSP", searchtb.Value.ToString());
+            Session["search"] = Data.SelectTableSearch("SANPHAM", "TenSP", searchtb.Value.ToString());
             Response.Redirect("SanPham.aspx");
         }
     }

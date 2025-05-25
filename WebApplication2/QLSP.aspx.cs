@@ -71,9 +71,6 @@ namespace WebApplication2
                 fulUpHinh.SaveAs(MapPath("img/" + sTenfile));
                 img = sTenfile;
             }
-            //string sql = "select * from SANPHAM where Hinh='" + img.Trim() + "'";
-            //DataTable dt = new EnforceModel().ExecuteSelect(sql);
-            //if (dt.Rows.Count > 0) { 
             List<SqlParameter> list = new List<SqlParameter>()
                     {
                         new SqlParameter("@MaSP", id),
@@ -86,7 +83,6 @@ namespace WebApplication2
 
             lk.sql_parameter(sql1, list.ToArray()).ExecuteNonQuery();
             LoadData();
-            //}
             gdvSP.EditIndex = -1;
         }
 

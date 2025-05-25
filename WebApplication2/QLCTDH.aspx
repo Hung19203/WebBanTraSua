@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="QLCTDH.aspx.cs" Inherits="WebApplication2.QLCTDH" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="Lib/Grid_Paging.js"></script>
+    <script src="js/Grid_Paging.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="parent">

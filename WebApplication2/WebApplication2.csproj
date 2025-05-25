@@ -98,48 +98,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Handle\ActionMethod.aspx" />
-    <Content Include="Lib\bootstrap.min.css" />
-    <Content Include="Lib\bootstrap.min.js" />
-    <Content Include="Lib\bootstrap_bundle.js" />
-    <Content Include="Lib\Datalist_Paging.js" />
-    <Content Include="Lib\fontawesome-all.min.js" />
-    <Content Include="Lib\format.css" />
-    <Content Include="Lib\GoToTop.js" />
-    <Content Include="Lib\Grid_Paging.js" />
-    <Content Include="Lib\image_inside.css" />
-    <Content Include="Lib\jquery-3.3.1.min.js" />
-    <Content Include="Lib\jquery_18.js" />
-    <Content Include="Lib\PreviewImage.js" />
-    <Content Include="Lib\Style.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrap_bundle.js" />
+    <Content Include="js\Datalist_Paging.js" />
+    <Content Include="js\fontawesome-all.min.js" />
+    <Content Include="css\format.css" />
+    <Content Include="js\Grid_Paging.js" />
+    <Content Include="css\image_inside.css" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="css\Style.css" />
     <Content Include="QLCTDH.aspx" />
     <Content Include="QLDH.aspx" />
     <Content Include="QLHSX.aspx" />
     <Content Include="QLSP.aspx" />
     <Content Include="QLTK.aspx" />
     <Content Include="ChiTietSanPham.aspx" />
-    <Content Include="css\bootstrap-grid.css" />
-    <Content Include="css\bootstrap-grid.min.css" />
-    <Content Include="css\bootstrap-grid.rtl.css" />
-    <Content Include="css\bootstrap-grid.rtl.min.css" />
-    <Content Include="css\bootstrap-reboot.css" />
-    <Content Include="css\bootstrap-reboot.min.css" />
-    <Content Include="css\bootstrap-reboot.rtl.css" />
-    <Content Include="css\bootstrap-reboot.rtl.min.css" />
-    <Content Include="css\bootstrap-utilities.css" />
-    <Content Include="css\bootstrap-utilities.min.css" />
-    <Content Include="css\bootstrap-utilities.rtl.css" />
-    <Content Include="css\bootstrap-utilities.rtl.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="css\bootstrap.rtl.css" />
-    <Content Include="css\bootstrap.rtl.min.css" />
-    <Content Include="css_local\anhbg2.css" />
-    <Content Include="css_local\anhbg3.css" />
+    <Content Include="css_local\anhbg.css" />
     <Content Include="DangKy.aspx" />
     <Content Include="DataManager.aspx" />
-    <Content Include="font\all.css" />
     <Content Include="font\all.js" />
-    <Content Include="font\all.min.css" />
     <Content Include="font\all.min.js" />
     <Content Include="GioHang.aspx" />
     <Content Include="Gioithieu.aspx" />
@@ -186,15 +164,6 @@
     <Content Include="img\Trà-sữa-Trân-châu-đen-bg-wh.png" />
     <Content Include="img\Trà-Đen-bg-wh.png" />
     <Content Include="img\Trân-Châu-Đen.png" />
-    <Content Include="img\布丁-pudding.png" />
-    <Content Include="js\bootstrap.bundle.js" />
-    <Content Include="js\bootstrap.bundle.min.js" />
-    <Content Include="js\bootstrap.esm.js" />
-    <Content Include="js\bootstrap.esm.min.js" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery-3.3.1.min.js" />
-    <Content Include="js\popper.min.js" />
     <Content Include="Main_Page.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -202,28 +171,6 @@
     </Content>
     <Content Include="SanPham.aspx" />
     <Content Include="Site1.Master" />
-    <Content Include="css\bootstrap-grid.css.map" />
-    <Content Include="css\bootstrap-grid.min.css.map" />
-    <Content Include="css\bootstrap-grid.rtl.css.map" />
-    <Content Include="css\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="css\bootstrap-reboot.css.map" />
-    <Content Include="css\bootstrap-reboot.min.css.map" />
-    <Content Include="css\bootstrap-reboot.rtl.css.map" />
-    <Content Include="css\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="css\bootstrap-utilities.css.map" />
-    <Content Include="css\bootstrap-utilities.min.css.map" />
-    <Content Include="css\bootstrap-utilities.rtl.css.map" />
-    <Content Include="css\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="css\bootstrap.css.map" />
-    <Content Include="css\bootstrap.min.css.map" />
-    <Content Include="css\bootstrap.rtl.css.map" />
-    <Content Include="css\bootstrap.rtl.min.css.map" />
-    <Content Include="js\bootstrap.bundle.js.map" />
-    <Content Include="js\bootstrap.bundle.min.js.map" />
-    <Content Include="js\bootstrap.esm.js.map" />
-    <Content Include="js\bootstrap.esm.min.js.map" />
-    <Content Include="js\bootstrap.js.map" />
-    <Content Include="js\bootstrap.min.js.map" />
     <Content Include="font\TUV Above - Black.ttf" />
     <Content Include="font\TUV Above - Light.ttf" />
     <Content Include="font\TUV Above - Regular.ttf" />
@@ -237,13 +184,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\ai.0.22.9-build00167.js" />
-    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassSearch.cs" />
-    <Compile Include="Demo.cs" />
+    <Compile Include="ItemCard.cs" />
     <Compile Include="Handle\ActionMethod.aspx.cs">
       <DependentUpon>ActionMethod.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

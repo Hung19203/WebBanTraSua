@@ -2,7 +2,7 @@
     CodeBehind="SanPham.aspx.cs" Inherits="WebApplication2.SanPham" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="Lib/Datalist_Paging.js"></script>
+    <script src="js/Datalist_Paging.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
 
