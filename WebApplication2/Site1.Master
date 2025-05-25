@@ -19,6 +19,7 @@
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/format.css" rel="stylesheet" type="text/css" />
     <link href="Lib/Style.css" rel="stylesheet" type="text/css" />
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/fontawesome-all.min.js" type="text/javascript"></script>
@@ -28,50 +29,47 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="container">
-        <nav class="navbar navbar-expand-sm bg-white" style="height:55px">
-                <!--logo-->
-                <a class="navbar-brand" href="Main_Page.aspx">
-                  <img src="img/logo.png" alt="Avatar Logo" style="width:70px; height:50px" class="rounded-pill"> 
-                </a>
-                  
-            <!--menu-->               
-             <ul class="nav ms-auto my-2">
-              <li class="nav-item">
-                <a class="nav-link active" href="Main_Page.aspx" style="color:#FC5759">TRANG CHỦ</a>
+        <div class="contain">
+        <!--logo-->
+        <a href="Main_Page.aspx">
+            <img src="img/logo.png" alt="Avatar Logo" class="logo"> 
+        </a>                  
+        <!--menu-->
+        <nav>
+            <ul>
+              <li class="item">
+                <a href="Main_Page.aspx">TRANG CHỦ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Gioithieu.aspx" style="color:#FC5759">GIỚI THIỆU</a>
+              <li class="item">
+                <a href="Gioithieu.aspx">GIỚI THIỆU</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link me-3" href="SanPham.aspx" style="color:#FC5759">SẢN PHẨM</a>
+              <li class="item">
+                <a href="SanPham.aspx">SẢN PHẨM</a>
               </li>
-              <li class="nav-item" style="margin-top: 8px">
-                <asp:LinkButton ID="Lnkql" runat="server" CssClass="me-3" PostBackUrl="QLSP.aspx" Text="DANH MỤC QUẢN LÝ" ForeColor="#FC5759" />
+              <li class="item">
+                <asp:LinkButton ID="Lnkql" runat="server" CssClass="#" PostBackUrl="QLSP.aspx" Text="DANH MỤC QUẢN LÝ" ForeColor="#FC5759" />
               </li>
-              <li class="nav-item">
-                <input runat="server" id="searchtb" class="form-control col me-2" type="text" placeholder="Search..">
-              </li>
-              <li class="nav-item me-2">
-                  <Button runat="server" ID="search" class="btn col" type="submit" style="background-color:#FC5759" onserverclick="Search_Click"><i class="fa-solid fa-magnifying-glass" style="color:white"></i></Button>
-                </li>           
-               <li class="nav-item me-2" style="margin-top: 8px">               
+              <li class="item">
+                <input runat="server" id="searchtb" type="text" placeholder="Search..">
+                <Button runat="server" ID="search" type="submit" style="background-color:#FC5759" onserverclick="Search_Click"><i class="fa-solid fa-magnifying-glass" style="color:white"></i></Button>
+               </li>           
+               <li class="item">               
                    <div id="loginForm" runat="server">Xin Chào,&nbsp;<span runat="server" id="loginName" style="font-weight: bold;">admin</span>&nbsp;&nbsp;
                        <a id="loginDangXuat" runat="server" onserverclick="loginDangXuat_Click" href="#"><i class="fas fa-times"></i></a>
                    </div>
                </li>
-               <li class="nav-item me-2"> 
-                   <button runat="server" id="loginButton" class="btn btn-outline-danger"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="">
+               <li class="item"> 
+                   <button runat="server" id="loginButton" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" value="">
                       <i class="fas fa-user"></i>&nbsp Đăng nhập
                    </button>
                </li>
-              <li class="nav-item">
-                <a href="GioHang.aspx"  class="text-danger" style="font-size:20pt; margin-top:10px;"><i class="fas fa-shopping-cart"></i><span runat="server" class="text-light bg-danger" style="font-size:12pt; border-radius:50%; padding-left:5px; padding-right:5px; padding-bottom:1px; padding-top:1px;" id="countShopPay"></span></a>
-              </li>  
-           </ul>                                                                                      
-       </nav>
-        <hr style="border:2px solid #ff4d4f"/>
-    </div>
+              <li class="item">
+                <a href="GioHang.aspx" style="font-size:20pt; margin-top:10px;"><i class="fas fa-shopping-cart"></i><span runat="server" class="text-light bg-danger" style="font-size:12pt; border-radius:50%; padding-left:5px; padding-right:5px; padding-bottom:1px; padding-top:1px;" id="countShopPay"></span></a>
+              </li>
+                </ul>
+            </nav>
+        </div>
+    <hr /> 
     <div class="container">
     <div class="row">
         <div id="Admin" class="col-3" runat="server">

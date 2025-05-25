@@ -105,9 +105,7 @@
     <Content Include="js\fontawesome-all.min.js" />
     <Content Include="css\format.css" />
     <Content Include="js\Grid_Paging.js" />
-    <Content Include="css\image_inside.css" />
     <Content Include="js\jquery-3.3.1.min.js" />
-    <Content Include="css\Style.css" />
     <Content Include="QLCTDH.aspx" />
     <Content Include="QLDH.aspx" />
     <Content Include="QLHSX.aspx" />
